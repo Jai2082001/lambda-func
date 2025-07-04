@@ -16,13 +16,15 @@ export async function GET() {
         secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY || '',
     };
 
+    console.log(credentials)
+
     const signer = new SignatureV4({
         credentials,
         region: process.env.AWS_REGION || 'ca-central-1',
         service: 'lambda',
         sha256: Sha256,
     });
-
+    console.log(signer)
     const request = new HttpRequest({
         method: 'GET',
         protocol: LAMBDA_URL.protocol,

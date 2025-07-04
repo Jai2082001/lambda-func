@@ -12,7 +12,7 @@ export default function Home() {
           alt="Next.js logo"
           width={180}
           height={38}
-          priority
+          priority  
         />
         <ol>
           <li>
