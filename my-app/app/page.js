@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
+      {process.env.AWS_ACCESS_KEY_ID}
       <main className={styles.main}>
         <Image
           className={styles.logo}
